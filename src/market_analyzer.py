@@ -1565,7 +1565,7 @@ Output the report content directly, no extra commentary.
 - 必须输出纯 Markdown 文本格式
 - 禁止输出 JSON 格式
 - 禁止输出代码块
-- 不允许使用emoji
+- 不允许使用emoji,不允许使用任何表情符号
 - {workflow_hint}
 - 不要重复列出已由系统注入的表格数据；正文负责解释表格背后的含义
 {data_boundary_requirement}
@@ -1737,7 +1737,7 @@ Market conditions can change quickly. The data above is for reference only and d
             if self.profile.has_market_stats
             else ""
         )
-        return f"""## {overview.date} 大盘复盘
+        return f"""### {overview.date} 大盘复盘
 
 > 今日{market_label}市场整体呈现**{market_mood}**态势，优先观察{summary_focus}。
 
